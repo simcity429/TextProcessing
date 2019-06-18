@@ -9,8 +9,9 @@ driver = webdriver.Chrome(path)
 driver.implicitly_wait(3) # 암묵적으로 웹 자원을 (최대) 3초 기다리기
 driver.get('https://nid.naver.com/nidlogin.login')
 # Login
-id = 's_aya9343'
-pw = 'shameimaru429!'
+id = ''
+pw = ''
+#id, pw를 지웠으므로 본 코드는 동작하지 않습니다.
 driver.execute_script("document.getElementsByName('id')[0].value=\'" + id + "\'")
 driver.execute_script("document.getElementsByName('pw')[0].value=\'" + pw + "\'")
 driver.find_element_by_xpath('//*[@id="frmNIDLogin"]/fieldset/input').click()
